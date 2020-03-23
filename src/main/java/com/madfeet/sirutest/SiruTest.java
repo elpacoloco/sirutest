@@ -21,5 +21,14 @@ import java.util.stream.Collectors;
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(SiruTest.MODID)
 public class SiruTest {
+
     public static final String MODID = "sirutest";
+
+    public static final Logger LOGGER = LogManager.getLogger(MODID);
+
+    public SiruTest(){
+        //LOGGER.debug("Hello Siruvaco!");
+
+        MinecraftForge.EVENT_BUS.register(this);
+    }
 }
