@@ -2,6 +2,7 @@ package com.madfeet.sirutest.init;
 
 import com.madfeet.sirutest.SiruTest;
 import com.madfeet.sirutest.SiruTest.SiruItemGroup;
+import com.madfeet.sirutest.objects.items.SpecialItem;
 import net.minecraft.item.*;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.potion.EffectInstance;
@@ -23,6 +24,7 @@ public class ItemInit {
     public static final Item siruvarita = null;
     public static final Item monster_book = null;
     public static final Item siruvaconomicon = null;
+    public static final Item siruespecial = null;
 
     //TOOLS
     public static final Item sirupico = null;
@@ -38,9 +40,9 @@ public class ItemInit {
     public static void registerItems(final RegistryEvent.Register<Item> event){
         //ITEMS
         event.getRegistry().register(new Item(new Item.Properties().group(SiruItemGroup.SIRU_ITEM_GROUP)).setRegistryName("siruvarita"));
-        event.getRegistry().register(new Item(new Item.Properties().group(SiruItemGroup.SIRU_ITEM_GROUP).food(
-                new Food.Builder().hunger(6).saturation(1.2f).setAlwaysEdible().build())).setRegistryName("monster_book"));
+        event.getRegistry().register(new Item(new Item.Properties().group(SiruItemGroup.SIRU_ITEM_GROUP).food(new Food.Builder().hunger(6).saturation(1.2f).setAlwaysEdible().build())).setRegistryName("monster_book"));
         event.getRegistry().register(new Item(new Item.Properties().group(SiruItemGroup.SIRU_ITEM_GROUP)).setRegistryName("siruvaconomicon"));
+        event.getRegistry().register(new SpecialItem(new Item.Properties().group(SiruItemGroup.SIRU_ITEM_GROUP)).setRegistryName("siruespecial"));
 
         //TOOLS
         event.getRegistry().register(new PickaxeItem(SiruItemTier.SIRUTIER, 4, 1.5f, new Item.Properties().group(SiruItemGroup.SIRU_ITEM_GROUP)).setRegistryName("sirupico"));

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "sirutest:monster_book",
+    "sirutest:siruvaconomicon",
+    "minecraft:book"
+  ]
+}
