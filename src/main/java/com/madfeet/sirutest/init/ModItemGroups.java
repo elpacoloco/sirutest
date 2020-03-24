@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import java.util.function.Supplier;
 
 public class ModItemGroups {
-    public static class ModItemGroup extends ItemGroup {
+    /*public static class ModItemGroup extends ItemGroup {
 
         private final Supplier<ItemStack> iconSupplier;
 
@@ -20,7 +20,7 @@ public class ModItemGroups {
         public ItemStack createIcon() {
             return iconSupplier.get();
         }
-    }
+    }*/
 
-    public static final ItemGroup MOD_ITEM_GROUP = new ModItemGroup(SiruTest.MODID, () -> new ItemStack(ModItems.SIRUVACONOMICON));
+    //public static final ItemGroup MOD_ITEM_GROUP = new ModItemGroup(SiruTest.MOD_ID, () -> new ItemStack(ItemInit.monster_book));
 }

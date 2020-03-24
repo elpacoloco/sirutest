@@ -1,4 +1,17 @@
 {
   "item.sirutest.siruvaconomicon": "Siruvaconomicon",
-  "itemGroup.sirutest": "SiruMod"
+  "item.sirutest.siruvarita": "Siruvarita",
+  "item.sirutest.monster_book": "Monster Book",
+
+  "item.sirutest.sirusword": "Sirusword",
+
+  "item.sirutest.sirupala": "Sirupala",
+  "item.sirutest.siruazada": "Siruazada",
+  "item.sirutest.sirupico": "Sirupico",
+  "item.sirutest.siruhacha": "Siruhacha",
+
+  "block.sirutest.siruore": "Siruore",
+  "block.sirutest.sirubloque": "Sirubloque",
+
+  "itemGroup.sirutab": "SiruMod"
 }

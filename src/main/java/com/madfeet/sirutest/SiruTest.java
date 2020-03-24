@@ -1,34 +1,65 @@
 package com.madfeet.sirutest;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
+import com.madfeet.sirutest.init.BlockInit;
+import com.madfeet.sirutest.init.ItemInit;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.stream.Collectors;
-
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(SiruTest.MODID)
+@Mod(SiruTest.MOD_ID)
 public class SiruTest {
 
-    public static final String MODID = "sirutest";
-
-    public static final Logger LOGGER = LogManager.getLogger(MODID);
+    public static final String MOD_ID = "sirutest";
+    public static SiruTest instance;
+    public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
     public SiruTest(){
         //LOGGER.debug("Hello Siruvaco!");
 
+        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        modEventBus.addListener(this::setup);
+        modEventBus.addListener(this::doClientStuff);
+
+        instance = this;
         MinecraftForge.EVENT_BUS.register(this);
     }
+
+    private void setup(final FMLCommonSetupEvent event){
+
+    }
+
+    private void doClientStuff(final FMLClientSetupEvent event){
+
+    }
+
+    @SubscribeEvent
+    public void onServerStarting(FMLServerStartingEvent event){
+
+    }
+
+    public static class SiruItemGroup extends ItemGroup{
+        public static final SiruItemGroup SIRU_ITEM_GROUP = new SiruItemGroup(ItemGroup.GROUPS.length, "sirutab");
+
+        private SiruItemGroup(int index, String label){
+            super(index, label);
+        }
+
+        @Override
+        public ItemStack createIcon(){
+            return new ItemStack(ItemInit.siruvaconomicon);
+            //return new ItemStack(BlockInit.sirubloque);
+        }
+    }
+
+
 }
