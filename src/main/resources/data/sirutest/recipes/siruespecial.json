@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IiI",
+    "I I",
+    "IiI"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:stick"
+    },
+    "i": {
+      "tag": "forge:ingots/iron"
+    }
+  },
+  "result": {
+    "item": "sirutest:siruespecial"
+  }
+}

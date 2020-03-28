@@ -2,6 +2,7 @@ package com.madfeet.sirutest;
 
 import com.madfeet.sirutest.init.BlockInit;
 import com.madfeet.sirutest.init.ItemInit;
+import com.madfeet.sirutest.world.gen.SiruOreGen;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Effect;
@@ -13,6 +14,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
@@ -20,6 +22,7 @@ import org.apache.logging.log4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(SiruTest.MOD_ID)
+@Mod.EventBusSubscriber(modid = SiruTest.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class SiruTest {
 
     public static final String MOD_ID = "sirutest";
@@ -48,6 +51,12 @@ public class SiruTest {
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event){
 
+    }
+
+    @SubscribeEvent
+    public static void loadCompleteEvent(FMLLoadCompleteEvent event){
+        //Este método siempre antes del server start (FMLLoadCompleteEvent va bastante antes, así que bien)
+        SiruOreGen.generateOre();
     }
 
     public static class SiruItemGroup extends ItemGroup{

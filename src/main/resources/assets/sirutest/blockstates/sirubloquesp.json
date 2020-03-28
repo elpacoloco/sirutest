@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": {    "model": "sirutest:block/sirubloquesp"    },
+    "facing=south": {    "model": "sirutest:block/sirubloquesp", "y": 180    },
+    "facing=west": {    "model": "sirutest:block/sirubloquesp", "y": 270    },
+    "facing=east": {    "model": "sirutest:block/sirubloquesp", "y": 90    }
+  }
+}

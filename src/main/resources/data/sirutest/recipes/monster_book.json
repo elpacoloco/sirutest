@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+      "item": "sirutest:siruvaconomicon"
+  },
+  "result": "sirutest:monster_book",
+  "experience": 50.0,
+  "cookingtime": 50
+}

@@ -3,8 +3,15 @@
   "item.sirutest.siruvarita": "Siruvarita",
   "item.sirutest.monster_book": "Monster Book",
   "item.sirutest.siruespecial": "STOP THIS SIRUWOKO",
+  "item.sirutest.tortugorro": "Tortugorro",
 
-  "item.sirutest.sirusword": "Sirusword",
+  "item.sirutest.siruswordo": "Siruswordo",
+
+
+  "item.sirutest.sirucasco": "Paco Cabeza",
+  "item.sirutest.sirubotas": "Silbota",
+  "item.sirutest.sirupiernas": "Piernototas",
+  "item.sirutest.sirucuerpo": "Poton Poton",
 
   "item.sirutest.sirupala": "Sirupala",
   "item.sirutest.siruazada": "Siruazada",
@@ -13,6 +20,7 @@
 
   "block.sirutest.siruore": "Siruore",
   "block.sirutest.sirubloque": "Sirubloque",
+  "block.sirutest.sirubloquesp": "Sirubloquesp",
 
   "itemGroup.sirutab": "SiruMod"
 }
