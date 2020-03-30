@@ -2,6 +2,7 @@ package com.madfeet.sirutest;
 
 import com.madfeet.sirutest.init.BlockInit;
 import com.madfeet.sirutest.init.ItemInit;
+import com.madfeet.sirutest.init.ModTileEntityTypes;
 import com.madfeet.sirutest.world.gen.SiruOreGen;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -35,6 +36,8 @@ public class SiruTest {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::doClientStuff);
+
+        ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
 
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);

@@ -33,7 +33,7 @@ public class SpecialItem extends Item {
         if(KeyboardHelper.isHoldingShift()){
             tooltip.add(new StringTextComponent("SIRUVAQUEWITAAAA"));
         }else{
-            tooltip.add(new StringTextComponent("Hold "+ "\u00A7e" + "SHIFT" + "\u00A77" + "para sirurerarorar"));
+            tooltip.add(new StringTextComponent("Hold "+ "\u00A7e" + "SHIFT" + "\u00A77" + " para sirurerarorar"));
         }
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
@@ -47,7 +47,7 @@ public class SpecialItem extends Item {
 
     @Override
     public boolean onEntityItemUpdate(ItemStack stack, ItemEntity entity) {
-        entity.getEntityWorld().setBlockState(entity.getPosition().down(), BlockInit.sirubloque.getDefaultState());
+        entity.getEntityWorld().setBlockState(entity.getPosition().down(), BlockInit.siruore.getDefaultState());
         return false;
     }
 

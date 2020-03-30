@@ -7,7 +7,6 @@
 
   "item.sirutest.siruswordo": "Siruswordo",
 
-
   "item.sirutest.sirucasco": "Paco Cabeza",
   "item.sirutest.sirubotas": "Silbota",
   "item.sirutest.sirupiernas": "Piernototas",
@@ -19,7 +18,7 @@
   "item.sirutest.siruhacha": "Siruhacha",
 
   "block.sirutest.siruore": "Siruore",
-  "block.sirutest.sirubloque": "Sirubloque",
+  "block.sirutest.siruquarry": "Siruquarry",
   "block.sirutest.sirubloquesp": "Sirubloquesp",
 
   "itemGroup.sirutab": "SiruMod"

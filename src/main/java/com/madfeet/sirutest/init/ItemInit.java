@@ -97,11 +97,11 @@ public class ItemInit {
         //(haverstlevel, durability, efficiency, dmg, enchantability, item for repair)
 
         SIRUTIER(4, 1500, 15.0f, 7.0f, 200, () ->{
-            return Ingredient.fromItems(BlockInit.sirubloque);
+            return Ingredient.fromItems(BlockInit.siruore);
         }),
 
         TORTUTIER(4, 1500, 15.0f, 7.0f, 200, () ->{
-            return Ingredient.fromItems(BlockInit.sirubloque);
+            return Ingredient.fromItems(BlockInit.siruore);
         });
 
         private final int harvestLevel;
