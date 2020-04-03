@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": {    "model": "sirutest:block/def_block"    }
+  }
+}

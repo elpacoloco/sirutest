@@ -1,6 +1,7 @@
 package com.madfeet.sirutest;
 
 import com.madfeet.sirutest.init.*;
+import com.madfeet.sirutest.world.biomes.SiruBiome;
 import com.madfeet.sirutest.world.gen.SiruOreGen;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -9,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -45,6 +47,8 @@ public class SiruTest {
 
         ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
 
+        BiomeInit.BIOMES.register(modEventBus);
+
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -61,6 +65,11 @@ public class SiruTest {
         });
 
         LOGGER.debug("Registered block items: ");
+    }
+
+    @SubscribeEvent
+    public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event){
+        BiomeInit.registerBiomes();
     }
 
     private void setup(final FMLCommonSetupEvent event){
