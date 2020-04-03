@@ -21,5 +21,10 @@
   "block.sirutest.siruquarry": "Siruquarry",
   "block.sirutest.sirubloquesp": "Sirubloquesp",
 
+  "block.sirutest.siru_fence": "Siruvalla",
+  "block.sirutest.siru_button": "Sirubotón",
+  "block.sirutest.siru_pressure_plate": "Detector de peso",
+  "block.sirutest.siru_stairs": "Siruescalera",
+
   "itemGroup.sirutab": "SiruMod"
 }

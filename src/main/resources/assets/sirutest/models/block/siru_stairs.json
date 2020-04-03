@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "sirutest:blocks/siruore",
+        "top": "sirutest:blocks/siruore",
+        "side": "sirutest:blocks/siruore"
+    }
+}
